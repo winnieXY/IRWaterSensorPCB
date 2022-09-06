@@ -1,0 +1,98 @@
+
+(session IRWaterSensorPCB.ses
+  (base_design IRWaterSensorPCB.dsn)
+  (placement
+    (resolution um 10)
+    (component "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical"
+      (place J1 1295400 -889000 front 270)
+    )
+    (component Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder
+      (place R2 1370000 -889000 front 0)
+      (place R1 1367500 -965200 front 0)
+    )
+    (component LED_THT:LED_D3.0mm_Clear
+      (place Q1 1447800 -912500 front 90)
+    )
+    (component LED_THT:LED_D3.0mm_IRBlack
+      (place D1 1447800 -965200 front 90)
+    )
+  )
+  (was_is
+  )
+  (routes 
+    (resolution um 10)
+    (parser
+      (host_cad "KiCad's Pcbnew")
+      (host_version "(6.0.5)")
+    )
+    (library_out 
+      (padstack "Via[0-1]_800:400_um"
+        (shape
+          (circle F.Cu 8000 0 0)
+        )
+        (shape
+          (circle B.Cu 8000 0 0)
+        )
+        (attach off)
+      )
+    )
+    (network_out 
+      (net "Net-(D1-Pad1)"
+        (wire
+          (path F.Cu 2500
+            1447800 -965200
+            1435547 -965200
+          )
+        )
+        (wire
+          (path F.Cu 2500
+            1435547 -965200
+            1423128 -977619
+            1364419 -977619
+            1352000 -965200
+          )
+        )
+      )
+      (net POWER
+        (wire
+          (path F.Cu 2500
+            1447800 -939800
+            1422000 -914000
+            1295400 -914000
+          )
+        )
+      )
+      (net RESPONSE
+        (wire
+          (path F.Cu 2500
+            1354500 -889000
+            1295400 -889000
+          )
+        )
+        (wire
+          (path F.Cu 2500
+            1447800 -887100
+            1433630 -901270
+            1366770 -901270
+            1354500 -889000
+          )
+        )
+      )
+      (net +3V3
+        (wire
+          (path B.Cu 2500
+            1447800 -912500
+            1435547 -912500
+          )
+        )
+        (wire
+          (path B.Cu 2500
+            1435547 -912500
+            1384047 -964000
+            1295400 -964000
+          )
+        )
+      )
+    )
+  )
+)
